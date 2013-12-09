@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  ZEN BabyBook
+
+  English translation (reference)
+*/
+
+// IN-APP PURCHASE MESSAGES
+"Product not buyable"               =           "This product isn't allowed to be purchased";
+"Purchase failed"                   =           "Purchase failed";
+"Purchase complete"                 =           "Purchase complete !";
+"Copying failed"                    =           "Copying failed";
+// Download states
+"Download failed"                   =           "Download failed";
+"Download cancelled"                =           "Download cancelled";
+"Download active"                   =           "Active";
+"Download waiting"                  =           "Waiting";
+"Download paused"                   =           "Download paused";
+"Download finished"                 =           "Download finished";
+"Unexpected state"                  =           "Unexpected state !";
+
+
+// STORE LIST VIEW CONTROLLER
+"Store List title"                  =           "Store";
+"Pull-to-refresh text"              =           "Updating store items ...";
+"Installing"                        =           "Installing ...";
+"Update"                            =           "Update available";
+"Installed"                         =           "Installed";
+// Restore alertView
+"Restore title"                     =           "Restore content";
+"Restore message"                   =           "Do you want to check for and restore any previous purchases ?";
+"Restore"                           =           "Restore";
+"Cancel"                            =           "Cancel";
+
+
+// STORE DETAIL VIEW CONTROLLER
+"Store Detail title"                =           "In-app purchase";
+"Version"                           =           "Version";
+"Buy"                               =           "Buy";
+"Update available, please restore"  =           "Update available, please restore";
+"Current value"                     =           "Current value";
+"Remaining"                         =           "remaining";
+// Button titles
+"Cancel"                            =           "Cancel";
+"Pause"                             =           "Pause";
+"Resume"                            =           "Resume";
+
+
+// SETTINGS
+"Settings"                          =           "Settings";
+"Languages"                         =           "Languages";
+"First Language"                    =           "First Language";
+"Second Language"                   =           "Second Language";
+"Item settings"                     =           "Items";
+"Display name while speaking"       =           "Display name while speaking";
+"Play animal sounds"                =           "Play animal sounds";
+"Information"                       =           "Information";
+"Credits"                           =           "Credits";

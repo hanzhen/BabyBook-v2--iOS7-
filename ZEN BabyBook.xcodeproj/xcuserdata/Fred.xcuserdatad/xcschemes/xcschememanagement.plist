@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ZEN BabyBook.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>package1.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>package2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>B62171A71732EFB000F55A0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B62B07A916FF148D000766FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B62B081416FF1736000766FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B62B087F16FF28A3000766FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B62B088E16FF8CB3000766FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B66B2DD916BEA35A00C420F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

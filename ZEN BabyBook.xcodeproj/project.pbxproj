@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B607F4C91715C3B7004425E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B607F4C81715C3B7004425E6 /* QuartzCore.framework */; };
+		B631A14E170734BE00ED351A /* Colors in Resources */ = {isa = PBXBuildFile; fileRef = B631A14D170734BE00ED351A /* Colors */; };
+		B63E9D4A184E08FF00C46FF6 /* UIButton+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = B63E9D49184E08FF00C46FF6 /* UIButton+Round.m */; };
+		B643771316C7C59A00EDCB5C /* ZENAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B643771216C7C59A00EDCB5C /* ZENAlbumViewController.m */; };
+		B643771B16C7D8E500EDCB5C /* ZENAlbumImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B643771A16C7D8E500EDCB5C /* ZENAlbumImageCell.m */; };
+		B64BA4D416BF0E960002B073 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B64BA4D616BF0E960002B073 /* Localizable.strings */; };
+		B64BA4DC16BF0FFA0002B073 /* AnimalsFarm in Resources */ = {isa = PBXBuildFile; fileRef = B64BA4DB16BF0FFA0002B073 /* AnimalsFarm */; };
+		B64E347916EDE337009F57EF /* ZENLanguagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64E347616EDE337009F57EF /* ZENLanguagePickerViewController.m */; };
+		B669E50216D234E00005CF31 /* ZENSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669E50116D234E00005CF31 /* ZENSettingsTableViewController.m */; };
+		B66B2DDE16BEA35A00C420F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B2DDD16BEA35A00C420F7 /* UIKit.framework */; };
+		B66B2DE016BEA35A00C420F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B2DDF16BEA35A00C420F7 /* Foundation.framework */; };
+		B66B2DE216BEA35A00C420F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B2DE116BEA35A00C420F7 /* CoreGraphics.framework */; };
+		B66B2DE816BEA35A00C420F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B66B2DE616BEA35A00C420F7 /* InfoPlist.strings */; };
+		B66B2DEA16BEA35A00C420F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2DE916BEA35A00C420F7 /* main.m */; };
+		B66B2DFA16BEA35A00C420F7 /* Storyboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B66B2DF816BEA35A00C420F7 /* Storyboard_iPad.storyboard */; };
+		B66B2E1A16BEA46400C420F7 /* ZENImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2E1916BEA46400C420F7 /* ZENImageViewController.m */; };
+		B66B2E2316BEA49A00C420F7 /* ZENAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2E2016BEA49A00C420F7 /* ZENAlbum.m */; };
+		B66B2E2416BEA49A00C420F7 /* ZENItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2E2216BEA49A00C420F7 /* ZENItem.m */; };
+		B66B2E2716BEA4D600C420F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66B2E2616BEA4D600C420F7 /* AudioToolbox.framework */; };
+		B6748B9E1853B5B700529BF9 /* CEReversibleAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6748B9B1853B5B700529BF9 /* CEReversibleAnimationController.m */; };
+		B6748BA21853B61C00529BF9 /* ZENPortalAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6748BA11853B61C00529BF9 /* ZENPortalAnimationController.m */; };
+		B6748BA51853E05100529BF9 /* ZENZoomInAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6748BA41853E05100529BF9 /* ZENZoomInAnimationController.m */; };
+		B69BFB8618394D26001E79F7 /* Vegetables in Resources */ = {isa = PBXBuildFile; fileRef = B69EA69B16F7BC7500CDA730 /* Vegetables */; };
+		B69BFB8718394D2A001E79F7 /* AnimalsOcean in Resources */ = {isa = PBXBuildFile; fileRef = B6DCF4EB171B1F0D00B5D1FA /* AnimalsOcean */; };
+		B69BFB8818394D2F001E79F7 /* AnimalsSavanna in Resources */ = {isa = PBXBuildFile; fileRef = B6DCF4ED171B285C00B5D1FA /* AnimalsSavanna */; };
+		B69BFB8918394D36001E79F7 /* Fruits in Resources */ = {isa = PBXBuildFile; fileRef = B6CEB67816F526B500389467 /* Fruits */; };
+		B69BFB8B18395465001E79F7 /* ZENAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2DED16BEA35A00C420F7 /* ZENAppDelegate.m */; };
+		B69CB51F16EE6044003A771C /* ZENLanguageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B69CB51E16EE6044003A771C /* ZENLanguageTableViewCell.m */; };
+		B6A3BB2A1752AE4E00533C53 /* ZENContentStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B66B2E1C16BEA47600C420F7 /* ZENContentStore.m */; };
+		B6A9489B16CA6AE20096075C /* ZENGlobalSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A9489A16CA6AE20096075C /* ZENGlobalSettings.m */; };
+		B6A9489E16CAC0910096075C /* ZENLanguageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A9489D16CAC0910096075C /* ZENLanguageStore.m */; };
+		B6A948A116CAC11F0096075C /* ZENLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A948A016CAC11F0096075C /* ZENLanguage.m */; };
+		B6B5769317CA2EF100CFB022 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B5769217CA2EF000CFB022 /* Images.xcassets */; };
+		B6CEB65516F45A3500389467 /* ZENAlbumCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CEB65416F45A3500389467 /* ZENAlbumCoverCell.m */; };
+		B6CEB66216F4E8EC00389467 /* UIImage+RWExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CEB66116F4E8EC00389467 /* UIImage+RWExtensions.m */; };
+		B6CEB68616F5D36E00389467 /* UIColor+ZENColor.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CEB68516F5D36E00389467 /* UIColor+ZENColor.m */; };
+		B6E9C99C17134D5100B8CDCD /* ZENCreditsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E9C99B17134D5100B8CDCD /* ZENCreditsViewController.m */; };
+		B6F3A3CF16D1069E00D6BED4 /* ZENMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6F3A3CE16D1069E00D6BED4 /* ZENMainMenuViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B607F4C81715C3B7004425E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B631A14D170734BE00ED351A /* Colors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Colors; sourceTree = "<group>"; };
+		B63E9D48184E08FF00C46FF6 /* UIButton+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Round.h"; path = "ZEN BabyBook/UIButton+Round.h"; sourceTree = "<group>"; };
+		B63E9D49184E08FF00C46FF6 /* UIButton+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Round.m"; path = "ZEN BabyBook/UIButton+Round.m"; sourceTree = "<group>"; };
+		B643771116C7C59A00EDCB5C /* ZENAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENAlbumViewController.h; sourceTree = "<group>"; };
+		B643771216C7C59A00EDCB5C /* ZENAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENAlbumViewController.m; sourceTree = "<group>"; };
+		B643771916C7D8E500EDCB5C /* ZENAlbumImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENAlbumImageCell.h; sourceTree = "<group>"; };
+		B643771A16C7D8E500EDCB5C /* ZENAlbumImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENAlbumImageCell.m; sourceTree = "<group>"; };
+		B64BA4D516BF0E960002B073 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B64BA4D716BF0ED70002B073 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B64BA4D816BF0ED70002B073 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B64BA4D916BF0EE60002B073 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B64BA4DA16BF0EE60002B073 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B64BA4DB16BF0FFA0002B073 /* AnimalsFarm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AnimalsFarm; sourceTree = "<group>"; };
+		B64E347516EDE337009F57EF /* ZENLanguagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENLanguagePickerViewController.h; sourceTree = "<group>"; };
+		B64E347616EDE337009F57EF /* ZENLanguagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENLanguagePickerViewController.m; sourceTree = "<group>"; };
+		B657EA1216C40ECD004F0E51 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B669E50016D234E00005CF31 /* ZENSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENSettingsTableViewController.h; sourceTree = "<group>"; };
+		B669E50116D234E00005CF31 /* ZENSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENSettingsTableViewController.m; sourceTree = "<group>"; };
+		B66B2DDA16BEA35A00C420F7 /* ZEN BabyBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZEN BabyBook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66B2DDD16BEA35A00C420F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B66B2DDF16BEA35A00C420F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B66B2DE116BEA35A00C420F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B66B2DE516BEA35A00C420F7 /* ZEN BabyBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ZEN BabyBook-Info.plist"; sourceTree = "<group>"; };
+		B66B2DE716BEA35A00C420F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B66B2DE916BEA35A00C420F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B66B2DEB16BEA35A00C420F7 /* ZEN BabyBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZEN BabyBook-Prefix.pch"; sourceTree = "<group>"; };
+		B66B2DEC16BEA35A00C420F7 /* ZENAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZENAppDelegate.h; sourceTree = "<group>"; };
+		B66B2DED16BEA35A00C420F7 /* ZENAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZENAppDelegate.m; sourceTree = "<group>"; };
+		B66B2DF916BEA35A00C420F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Storyboard_iPad.storyboard; sourceTree = "<group>"; };
+		B66B2E1816BEA46400C420F7 /* ZENImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENImageViewController.h; sourceTree = "<group>"; };
+		B66B2E1916BEA46400C420F7 /* ZENImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENImageViewController.m; sourceTree = "<group>"; };
+		B66B2E1B16BEA47600C420F7 /* ZENContentStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENContentStore.h; sourceTree = "<group>"; };
+		B66B2E1C16BEA47600C420F7 /* ZENContentStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENContentStore.m; sourceTree = "<group>"; };
+		B66B2E1F16BEA49A00C420F7 /* ZENAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENAlbum.h; sourceTree = "<group>"; };
+		B66B2E2016BEA49A00C420F7 /* ZENAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENAlbum.m; sourceTree = "<group>"; };
+		B66B2E2116BEA49A00C420F7 /* ZENItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENItem.h; sourceTree = "<group>"; };
+		B66B2E2216BEA49A00C420F7 /* ZENItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENItem.m; sourceTree = "<group>"; };
+		B66B2E2616BEA4D600C420F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B6748B9A1853B5B700529BF9 /* CEReversibleAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEReversibleAnimationController.h; sourceTree = "<group>"; };
+		B6748B9B1853B5B700529BF9 /* CEReversibleAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEReversibleAnimationController.m; sourceTree = "<group>"; };
+		B6748BA01853B61C00529BF9 /* ZENPortalAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENPortalAnimationController.h; sourceTree = "<group>"; };
+		B6748BA11853B61C00529BF9 /* ZENPortalAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENPortalAnimationController.m; sourceTree = "<group>"; };
+		B6748BA31853E05100529BF9 /* ZENZoomInAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENZoomInAnimationController.h; sourceTree = "<group>"; };
+		B6748BA41853E05100529BF9 /* ZENZoomInAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENZoomInAnimationController.m; sourceTree = "<group>"; };
+		B69CB51D16EE6044003A771C /* ZENLanguageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENLanguageTableViewCell.h; sourceTree = "<group>"; };
+		B69CB51E16EE6044003A771C /* ZENLanguageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENLanguageTableViewCell.m; sourceTree = "<group>"; };
+		B69EA69B16F7BC7500CDA730 /* Vegetables */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Vegetables; sourceTree = "<group>"; };
+		B6A3A4F9174F6AFC003DF840 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6A3A4FA174F6AFC003DF840 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6A3BB2817514B7100533C53 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B6A3BB2917514B7100533C53 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B6A9489916CA6AE20096075C /* ZENGlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENGlobalSettings.h; sourceTree = "<group>"; };
+		B6A9489A16CA6AE20096075C /* ZENGlobalSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENGlobalSettings.m; sourceTree = "<group>"; };
+		B6A9489C16CAC0910096075C /* ZENLanguageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENLanguageStore.h; sourceTree = "<group>"; };
+		B6A9489D16CAC0910096075C /* ZENLanguageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENLanguageStore.m; sourceTree = "<group>"; };
+		B6A9489F16CAC11F0096075C /* ZENLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENLanguage.h; sourceTree = "<group>"; };
+		B6A948A016CAC11F0096075C /* ZENLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENLanguage.m; sourceTree = "<group>"; };
+		B6B5769217CA2EF000CFB022 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B6CEB65316F45A3500389467 /* ZENAlbumCoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENAlbumCoverCell.h; sourceTree = "<group>"; };
+		B6CEB65416F45A3500389467 /* ZENAlbumCoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENAlbumCoverCell.m; sourceTree = "<group>"; };
+		B6CEB66016F4E8EC00389467 /* UIImage+RWExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RWExtensions.h"; path = "ZEN BabyBook/Additional libraries/UIImage+RWExtensions.h"; sourceTree = "<group>"; };
+		B6CEB66116F4E8EC00389467 /* UIImage+RWExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RWExtensions.m"; path = "ZEN BabyBook/Additional libraries/UIImage+RWExtensions.m"; sourceTree = "<group>"; };
+		B6CEB67816F526B500389467 /* Fruits */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fruits; sourceTree = "<group>"; };
+		B6CEB68416F5D36E00389467 /* UIColor+ZENColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ZENColor.h"; path = "ZEN BabyBook/UIColor+ZENColor.h"; sourceTree = "<group>"; };
+		B6CEB68516F5D36E00389467 /* UIColor+ZENColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ZENColor.m"; path = "ZEN BabyBook/UIColor+ZENColor.m"; sourceTree = "<group>"; };
+		B6DCF4EB171B1F0D00B5D1FA /* AnimalsOcean */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AnimalsOcean; sourceTree = "<group>"; };
+		B6DCF4ED171B285C00B5D1FA /* AnimalsSavanna */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AnimalsSavanna; sourceTree = "<group>"; };
+		B6E9C99A17134D5100B8CDCD /* ZENCreditsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENCreditsViewController.h; sourceTree = "<group>"; };
+		B6E9C99B17134D5100B8CDCD /* ZENCreditsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENCreditsViewController.m; sourceTree = "<group>"; };
+		B6F3A3CD16D1069E00D6BED4 /* ZENMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENMainMenuViewController.h; sourceTree = "<group>"; };
+		B6F3A3CE16D1069E00D6BED4 /* ZENMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENMainMenuViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B66B2DD716BEA35A00C420F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B607F4C91715C3B7004425E6 /* QuartzCore.framework in Frameworks */,
+				B66B2E2716BEA4D600C420F7 /* AudioToolbox.framework in Frameworks */,
+				B66B2DDE16BEA35A00C420F7 /* UIKit.framework in Frameworks */,
+				B66B2DE016BEA35A00C420F7 /* Foundation.framework in Frameworks */,
+				B66B2DE216BEA35A00C420F7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B643771C16C7D8EA00EDCB5C /* Custom Album collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B643771916C7D8E500EDCB5C /* ZENAlbumImageCell.h */,
+				B643771A16C7D8E500EDCB5C /* ZENAlbumImageCell.m */,
+			);
+			name = "Custom Album collectionViewCell";
+			sourceTree = "<group>";
+		};
+		B64BA4C916BF0DD10002B073 /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B66B2DF816BEA35A00C420F7 /* Storyboard_iPad.storyboard */,
+				B64E347216EDE26E009F57EF /* Main menu VC */,
+				B64E347316EDE279009F57EF /* Album VC */,
+				B64E347416EDE286009F57EF /* Image VC */,
+				B6F3A3D316D10C8D00D6BED4 /* Settings */,
+				B6748B99185396BC00529BF9 /* Custom VC transitions */,
+			);
+			name = "View controllers";
+			sourceTree = "<group>";
+		};
+		B64BA4DD16BF10020002B073 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				B64BA4DB16BF0FFA0002B073 /* AnimalsFarm */,
+				B631A14D170734BE00ED351A /* Colors */,
+				B6CEB67816F526B500389467 /* Fruits */,
+				B69EA69B16F7BC7500CDA730 /* Vegetables */,
+				B6DCF4EB171B1F0D00B5D1FA /* AnimalsOcean */,
+				B6DCF4ED171B285C00B5D1FA /* AnimalsSavanna */,
+			);
+			name = Albums;
+			path = Resources/Albums;
+			sourceTree = "<group>";
+		};
+		B64E347216EDE26E009F57EF /* Main menu VC */ = {
+			isa = PBXGroup;
+			children = (
+				B6F3A3CD16D1069E00D6BED4 /* ZENMainMenuViewController.h */,
+				B6F3A3CE16D1069E00D6BED4 /* ZENMainMenuViewController.m */,
+				B6CEB65616F45A3B00389467 /* Custom Menu collectionViewCell */,
+			);
+			name = "Main menu VC";
+			sourceTree = "<group>";
+		};
+		B64E347316EDE279009F57EF /* Album VC */ = {
+			isa = PBXGroup;
+			children = (
+				B643771116C7C59A00EDCB5C /* ZENAlbumViewController.h */,
+				B643771216C7C59A00EDCB5C /* ZENAlbumViewController.m */,
+				B643771C16C7D8EA00EDCB5C /* Custom Album collectionViewCell */,
+			);
+			name = "Album VC";
+			sourceTree = "<group>";
+		};
+		B64E347416EDE286009F57EF /* Image VC */ = {
+			isa = PBXGroup;
+			children = (
+				B66B2E1816BEA46400C420F7 /* ZENImageViewController.h */,
+				B66B2E1916BEA46400C420F7 /* ZENImageViewController.m */,
+			);
+			name = "Image VC";
+			sourceTree = "<group>";
+		};
+		B64E347B16EDE33D009F57EF /* Language picker */ = {
+			isa = PBXGroup;
+			children = (
+				B64E347516EDE337009F57EF /* ZENLanguagePickerViewController.h */,
+				B64E347616EDE337009F57EF /* ZENLanguagePickerViewController.m */,
+				B69CB51D16EE6044003A771C /* ZENLanguageTableViewCell.h */,
+				B69CB51E16EE6044003A771C /* ZENLanguageTableViewCell.m */,
+			);
+			name = "Language picker";
+			sourceTree = "<group>";
+		};
+		B657E9E416C2F16E004F0E51 /* UIImage+RWExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6CEB66016F4E8EC00389467 /* UIImage+RWExtensions.h */,
+				B6CEB66116F4E8EC00389467 /* UIImage+RWExtensions.m */,
+			);
+			name = "UIImage+RWExtensions";
+			sourceTree = "<group>";
+		};
+		B66B2DD116BEA35A00C420F7 = {
+			isa = PBXGroup;
+			children = (
+				B66B2DE316BEA35A00C420F7 /* ZEN BabyBook */,
+				B66B2DDC16BEA35A00C420F7 /* Frameworks */,
+				B66B2DDB16BEA35A00C420F7 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		B66B2DDB16BEA35A00C420F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B66B2DDA16BEA35A00C420F7 /* ZEN BabyBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B66B2DDC16BEA35A00C420F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B66B2DDF16BEA35A00C420F7 /* Foundation.framework */,
+				B66B2DDD16BEA35A00C420F7 /* UIKit.framework */,
+				B66B2DE116BEA35A00C420F7 /* CoreGraphics.framework */,
+				B607F4C81715C3B7004425E6 /* QuartzCore.framework */,
+				B66B2E2616BEA4D600C420F7 /* AudioToolbox.framework */,
+				B657EA1216C40ECD004F0E51 /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B66B2DE316BEA35A00C420F7 /* ZEN BabyBook */ = {
+			isa = PBXGroup;
+			children = (
+				B6B5769217CA2EF000CFB022 /* Images.xcassets */,
+				B66B2DEC16BEA35A00C420F7 /* ZENAppDelegate.h */,
+				B66B2DED16BEA35A00C420F7 /* ZENAppDelegate.m */,
+				B64BA4C916BF0DD10002B073 /* View controllers */,
+				B66B2E1E16BEA48700C420F7 /* Singletons */,
+				B66B2E2516BEA49E00C420F7 /* Model */,
+				B6CEB68716F5D3A700389467 /* Class categories */,
+				B66B2DE416BEA35A00C420F7 /* Supporting Files */,
+				B64BA4DD16BF10020002B073 /* Albums */,
+			);
+			path = "ZEN BabyBook";
+			sourceTree = "<group>";
+		};
+		B66B2DE416BEA35A00C420F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B64BA4D616BF0E960002B073 /* Localizable.strings */,
+				B66B2DE516BEA35A00C420F7 /* ZEN BabyBook-Info.plist */,
+				B66B2DE616BEA35A00C420F7 /* InfoPlist.strings */,
+				B66B2DE916BEA35A00C420F7 /* main.m */,
+				B66B2DEB16BEA35A00C420F7 /* ZEN BabyBook-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B66B2E1E16BEA48700C420F7 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				B6A9489916CA6AE20096075C /* ZENGlobalSettings.h */,
+				B6A9489A16CA6AE20096075C /* ZENGlobalSettings.m */,
+				B66B2E1B16BEA47600C420F7 /* ZENContentStore.h */,
+				B66B2E1C16BEA47600C420F7 /* ZENContentStore.m */,
+				B6A9489C16CAC0910096075C /* ZENLanguageStore.h */,
+				B6A9489D16CAC0910096075C /* ZENLanguageStore.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		B66B2E2516BEA49E00C420F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B66B2E1F16BEA49A00C420F7 /* ZENAlbum.h */,
+				B66B2E2016BEA49A00C420F7 /* ZENAlbum.m */,
+				B66B2E2116BEA49A00C420F7 /* ZENItem.h */,
+				B66B2E2216BEA49A00C420F7 /* ZENItem.m */,
+				B6A9489F16CAC11F0096075C /* ZENLanguage.h */,
+				B6A948A016CAC11F0096075C /* ZENLanguage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B6748B99185396BC00529BF9 /* Custom VC transitions */ = {
+			isa = PBXGroup;
+			children = (
+				B6748B9A1853B5B700529BF9 /* CEReversibleAnimationController.h */,
+				B6748B9B1853B5B700529BF9 /* CEReversibleAnimationController.m */,
+				B6748BA01853B61C00529BF9 /* ZENPortalAnimationController.h */,
+				B6748BA11853B61C00529BF9 /* ZENPortalAnimationController.m */,
+				B6748BA31853E05100529BF9 /* ZENZoomInAnimationController.h */,
+				B6748BA41853E05100529BF9 /* ZENZoomInAnimationController.m */,
+			);
+			name = "Custom VC transitions";
+			sourceTree = "<group>";
+		};
+		B6CEB65616F45A3B00389467 /* Custom Menu collectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B6CEB65316F45A3500389467 /* ZENAlbumCoverCell.h */,
+				B6CEB65416F45A3500389467 /* ZENAlbumCoverCell.m */,
+			);
+			name = "Custom Menu collectionViewCell";
+			sourceTree = "<group>";
+		};
+		B6CEB68716F5D3A700389467 /* Class categories */ = {
+			isa = PBXGroup;
+			children = (
+				B6CEB68416F5D36E00389467 /* UIColor+ZENColor.h */,
+				B6CEB68516F5D36E00389467 /* UIColor+ZENColor.m */,
+				B63E9D48184E08FF00C46FF6 /* UIButton+Round.h */,
+				B63E9D49184E08FF00C46FF6 /* UIButton+Round.m */,
+				B657E9E416C2F16E004F0E51 /* UIImage+RWExtensions */,
+			);
+			name = "Class categories";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		B6E9C99D17134D5800B8CDCD /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				B6E9C99A17134D5100B8CDCD /* ZENCreditsViewController.h */,
+				B6E9C99B17134D5100B8CDCD /* ZENCreditsViewController.m */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
+		B6F3A3D316D10C8D00D6BED4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B669E50016D234E00005CF31 /* ZENSettingsTableViewController.h */,
+				B669E50116D234E00005CF31 /* ZENSettingsTableViewController.m */,
+				B64E347B16EDE33D009F57EF /* Language picker */,
+				B6E9C99D17134D5800B8CDCD /* Credits */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B66B2DD916BEA35A00C420F7 /* ZEN BabyBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B66B2E0016BEA35A00C420F7 /* Build configuration list for PBXNativeTarget "ZEN BabyBook" */;
+			buildPhases = (
+				B66B2DD616BEA35A00C420F7 /* Sources */,
+				B66B2DD716BEA35A00C420F7 /* Frameworks */,
+				B66B2DD816BEA35A00C420F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ZEN BabyBook";
+			productName = "ZEN BabyBook";
+			productReference = B66B2DDA16BEA35A00C420F7 /* ZEN BabyBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B66B2DD216BEA35A00C420F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZEN;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Frédéric ADDA";
+				TargetAttributes = {
+					B66B2DD916BEA35A00C420F7 = {
+						DevelopmentTeam = K99V93H2NC;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B66B2DD516BEA35A00C420F7 /* Build configuration list for PBXProject "ZEN BabyBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				fr,
+				pt,
+				it,
+				tr,
+				de,
+			);
+			mainGroup = B66B2DD116BEA35A00C420F7;
+			productRefGroup = B66B2DDB16BEA35A00C420F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B66B2DD916BEA35A00C420F7 /* ZEN BabyBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B66B2DD816BEA35A00C420F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B66B2DE816BEA35A00C420F7 /* InfoPlist.strings in Resources */,
+				B66B2DFA16BEA35A00C420F7 /* Storyboard_iPad.storyboard in Resources */,
+				B69BFB8918394D36001E79F7 /* Fruits in Resources */,
+				B64BA4D416BF0E960002B073 /* Localizable.strings in Resources */,
+				B6B5769317CA2EF100CFB022 /* Images.xcassets in Resources */,
+				B64BA4DC16BF0FFA0002B073 /* AnimalsFarm in Resources */,
+				B631A14E170734BE00ED351A /* Colors in Resources */,
+				B69BFB8718394D2A001E79F7 /* AnimalsOcean in Resources */,
+				B69BFB8818394D2F001E79F7 /* AnimalsSavanna in Resources */,
+				B69BFB8618394D26001E79F7 /* Vegetables in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B66B2DD616BEA35A00C420F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B63E9D4A184E08FF00C46FF6 /* UIButton+Round.m in Sources */,
+				B66B2DEA16BEA35A00C420F7 /* main.m in Sources */,
+				B6748B9E1853B5B700529BF9 /* CEReversibleAnimationController.m in Sources */,
+				B66B2E1A16BEA46400C420F7 /* ZENImageViewController.m in Sources */,
+				B66B2E2316BEA49A00C420F7 /* ZENAlbum.m in Sources */,
+				B69BFB8B18395465001E79F7 /* ZENAppDelegate.m in Sources */,
+				B66B2E2416BEA49A00C420F7 /* ZENItem.m in Sources */,
+				B643771316C7C59A00EDCB5C /* ZENAlbumViewController.m in Sources */,
+				B6748BA51853E05100529BF9 /* ZENZoomInAnimationController.m in Sources */,
+				B643771B16C7D8E500EDCB5C /* ZENAlbumImageCell.m in Sources */,
+				B6A9489B16CA6AE20096075C /* ZENGlobalSettings.m in Sources */,
+				B6A9489E16CAC0910096075C /* ZENLanguageStore.m in Sources */,
+				B6A948A116CAC11F0096075C /* ZENLanguage.m in Sources */,
+				B6F3A3CF16D1069E00D6BED4 /* ZENMainMenuViewController.m in Sources */,
+				B669E50216D234E00005CF31 /* ZENSettingsTableViewController.m in Sources */,
+				B64E347916EDE337009F57EF /* ZENLanguagePickerViewController.m in Sources */,
+				B69CB51F16EE6044003A771C /* ZENLanguageTableViewCell.m in Sources */,
+				B6CEB65516F45A3500389467 /* ZENAlbumCoverCell.m in Sources */,
+				B6CEB66216F4E8EC00389467 /* UIImage+RWExtensions.m in Sources */,
+				B6CEB68616F5D36E00389467 /* UIColor+ZENColor.m in Sources */,
+				B6748BA21853B61C00529BF9 /* ZENPortalAnimationController.m in Sources */,
+				B6E9C99C17134D5100B8CDCD /* ZENCreditsViewController.m in Sources */,
+				B6A3BB2A1752AE4E00533C53 /* ZENContentStore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B64BA4D616BF0E960002B073 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B64BA4D516BF0E960002B073 /* en */,
+				B64BA4D716BF0ED70002B073 /* fr */,
+				B64BA4D916BF0EE60002B073 /* pt */,
+				B6A3A4F9174F6AFC003DF840 /* it */,
+				B6A3BB2817514B7100533C53 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B66B2DE616BEA35A00C420F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B66B2DE716BEA35A00C420F7 /* en */,
+				B64BA4D816BF0ED70002B073 /* fr */,
+				B64BA4DA16BF0EE60002B073 /* pt */,
+				B6A3A4FA174F6AFC003DF840 /* it */,
+				B6A3BB2917514B7100533C53 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B66B2DF816BEA35A00C420F7 /* Storyboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B66B2DF916BEA35A00C420F7 /* en */,
+			);
+			name = Storyboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B66B2DFE16BEA35A00C420F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Frederic ADDA (7RU9B644PD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Frederic ADDA (7RU9B644PD)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "E330812D-88B9-4403-85C8-C7E7DFDA77BF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E330812D-88B9-4403-85C8-C7E7DFDA77BF";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B66B2DFF16BEA35A00C420F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Frederic ADDA (K99V93H2NC)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Frederic ADDA (K99V93H2NC)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "19A732C6-30D3-449D-9EAD-7910376CD0F9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "19A732C6-30D3-449D-9EAD-7910376CD0F9";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B66B2E0116BEA35A00C420F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZEN BabyBook/ZEN BabyBook-Prefix.pch";
+				INFOPLIST_FILE = "ZEN BabyBook/ZEN BabyBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B66B2E0216BEA35A00C420F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZEN BabyBook/ZEN BabyBook-Prefix.pch";
+				INFOPLIST_FILE = "ZEN BabyBook/ZEN BabyBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B66B2DD516BEA35A00C420F7 /* Build configuration list for PBXProject "ZEN BabyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66B2DFE16BEA35A00C420F7 /* Debug */,
+				B66B2DFF16BEA35A00C420F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B66B2E0016BEA35A00C420F7 /* Build configuration list for PBXNativeTarget "ZEN BabyBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B66B2E0116BEA35A00C420F7 /* Debug */,
+				B66B2E0216BEA35A00C420F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B66B2DD216BEA35A00C420F7 /* Project object */;
+}

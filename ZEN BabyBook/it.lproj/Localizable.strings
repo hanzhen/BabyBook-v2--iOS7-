@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  ZEN BabyBook
+
+  Italian translation
+*/
+
+// IN-APP PURCHASE MESSAGES
+"Product not buyable"               =           "Prodotto indisponibile all'acquisto";
+"Purchase failed"                   =           "Acquisto non effettuato";
+"Purchase complete"                 =           "Acquisto effettuato !";
+"Copying failed"                    =           "Errore nella copia";
+// Download states
+"Download failed"                   =           "Scaricamento non effettuato";
+"Download cancelled"                =           "Scaricamento annullato";
+"Download active"                   =           "In corso";
+"Download waiting"                  =           "In attesa";
+"Download paused"                   =           "Scaricamento file in pausa";
+"Download finished"                 =           "Scaricamento effettuato";
+"Unexpected state"                  =           "Stato non previsto !";
+
+
+// STORE LIST VIEW CONTROLLER
+"Store List title"                  =           "Catalogo acquisti";
+"Pull-to-refresh text"              =           "Catalogo in corso di aggiornamento ...";
+"Installing"                        =           "Installazione in corso ...";
+"Update"                            =           "Aggiornamento disponibile";
+"Installed"                         =           "Installato";
+// Restore alertView
+"Restore title"                     =           "Ristabilire il contenuto";
+"Restore message"                   =           "Volete verificare e ristabilire i vostri acquisti precedenti ?";
+"Restore"                           =           "Ristabilire";
+"Cancel"                            =           "Annullare";
+
+
+
+// STORE DETAIL VIEW CONTROLLER
+"Store Detail title"                =           "Acquisto In-app";
+"Version"                           =           "Versione";
+"Buy"                               =           "Acquisto";
+"Update available, please restore"  =           "Aggiornamento disponibile, prego ristabilire";
+"Current value"                     =           "Valore attuale";
+"Remaining"                         =           "restanti";
+// Button titles
+"Cancel"                            =           "Annullare";
+"Pause"                             =           "Sospendere";
+"Resume"                            =           "Riprendere";
+
+
+// SETTINGS
+"Settings"                          =           "Messa a punto";
+"Languages"                         =           "Lingue";
+"First Language"                    =           "Prima lingua";
+"Second Language"                   =           "Seconda Lingua";
+"Item settings"                     =           "Immagini";
+"Display name while speaking"       =           "Indicare il nome delle immagini";
+"Play animal sounds"                =           "Ascoltare il verso degli animali";
+"Information"                       =           "Informazioni";
+"Credits"                           =           "Ringraziamenti";

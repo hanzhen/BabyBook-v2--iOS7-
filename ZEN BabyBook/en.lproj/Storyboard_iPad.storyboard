@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="wDo-Mr-JH9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Main Menu View Controller-->
+        <scene sceneID="wRv-x0-sNu">
+            <objects>
+                <viewController id="wDo-Mr-JH9" customClass="ZENMainMenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgK-9h-1iw"/>
+                        <viewControllerLayoutGuide type="bottom" id="8d7-H0-a8A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="My4-4c-tdG">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZENBabyBook_title" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-8x-Jcy">
+                                <rect key="frame" x="335" y="25" width="354" height="72"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0g-Z3-tXC">
+                                <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
+                                <items>
+                                    <barButtonItem image="switches" style="plain" id="N7o-DO-lFL">
+                                        <color key="tintColor" red="0.20000000000000001" green="0.30196078430000001" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="S6U-GQ-Zn6" kind="popover" identifier="ShowSettingsInPopover" popoverAnchorBarButtonItem="N7o-DO-lFL" id="WQf-zZ-nRk">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EaQ-7V-Ue5">
+                                <rect key="frame" x="20" y="137" width="984" height="587"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tvp-r7-mBi">
+                                    <size key="itemSize" width="250" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="WzG-Vo-JUJ" customClass="ZENAlbumCoverCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="IMG_Cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qbb-jh-W7j">
+                                                    <rect key="frame" x="20" y="20" width="210" height="185"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="185" id="4Pi-2d-rqI"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.50000000000000011" contentMode="left" text="Album title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ut8-8m-ElJ">
+                                                    <rect key="frame" x="20" y="213" width="210" height="27"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" red="0.57647061349999995" green="0.69803923369999998" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.49803921568627452" green="0.74509803921568629" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Qbb-jh-W7j" secondAttribute="trailing" constant="20" id="7Gr-RN-cXu"/>
+                                            <constraint firstAttribute="trailing" secondItem="ut8-8m-ElJ" secondAttribute="trailing" constant="20" id="8oM-AF-D4U"/>
+                                            <constraint firstItem="ut8-8m-ElJ" firstAttribute="top" secondItem="Qbb-jh-W7j" secondAttribute="bottom" constant="8" symbolic="YES" id="9MW-ka-f2s"/>
+                                            <constraint firstItem="ut8-8m-ElJ" firstAttribute="leading" secondItem="WzG-Vo-JUJ" secondAttribute="leading" constant="20" id="Cvs-Al-u61"/>
+                                            <constraint firstItem="Qbb-jh-W7j" firstAttribute="leading" secondItem="WzG-Vo-JUJ" secondAttribute="leading" constant="20" id="VNF-6R-OYY"/>
+                                            <constraint firstItem="Qbb-jh-W7j" firstAttribute="top" secondItem="WzG-Vo-JUJ" secondAttribute="top" constant="20" id="iev-bn-yzu"/>
+                                            <constraint firstAttribute="bottom" secondItem="ut8-8m-ElJ" secondAttribute="bottom" constant="10" id="o33-eU-PMq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="Qbb-jh-W7j" id="uHW-co-oPl"/>
+                                            <outlet property="albumLabel" destination="ut8-8m-ElJ" id="c4F-v2-668"/>
+                                            <segue destination="uSg-HN-9qs" kind="modal" identifier="ShowAlbum" modalTransitionStyle="flipHorizontal" id="jbS-7u-yg9"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wDo-Mr-JH9" id="IXa-4e-62r"/>
+                                    <outlet property="delegate" destination="wDo-Mr-JH9" id="dq9-L6-yb0"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.99784598769999999" blue="0.83512363879999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EaQ-7V-Ue5" firstAttribute="top" secondItem="3qb-8x-Jcy" secondAttribute="bottom" constant="40" id="1gO-nX-kqm"/>
+                            <constraint firstItem="EaQ-7V-Ue5" firstAttribute="leading" secondItem="My4-4c-tdG" secondAttribute="leading" constant="20" symbolic="YES" id="C9q-z0-cKU"/>
+                            <constraint firstItem="z0g-Z3-tXC" firstAttribute="top" secondItem="EaQ-7V-Ue5" secondAttribute="bottom" id="KHE-RS-P7i"/>
+                            <constraint firstAttribute="centerX" secondItem="3qb-8x-Jcy" secondAttribute="centerX" id="L9a-xD-2z4"/>
+                            <constraint firstItem="z0g-Z3-tXC" firstAttribute="bottom" secondItem="My4-4c-tdG" secondAttribute="bottom" id="YOT-PX-K4x"/>
+                            <constraint firstAttribute="trailing" secondItem="EaQ-7V-Ue5" secondAttribute="trailing" constant="20" symbolic="YES" id="eFo-KL-o5L"/>
+                            <constraint firstItem="z0g-Z3-tXC" firstAttribute="trailing" secondItem="My4-4c-tdG" secondAttribute="trailing" id="h1o-Z8-wOS"/>
+                            <constraint firstItem="z0g-Z3-tXC" firstAttribute="leading" secondItem="My4-4c-tdG" secondAttribute="leading" id="wlU-Od-0iH"/>
+                            <constraint firstItem="3qb-8x-Jcy" firstAttribute="top" secondItem="XgK-9h-1iw" secondAttribute="bottom" constant="25" id="zN9-Nh-oyg"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="albumCollectionView" destination="EaQ-7V-Ue5" id="Hk9-8q-P5C"/>
+                        <outlet property="titleImageView" destination="3qb-8x-Jcy" id="SEs-wt-oTx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TuC-QX-9Ic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2564" y="-3041"/>
+        </scene>
+        <!--Settings Table View Controller - Settings-->
+        <scene sceneID="8Ef-9X-nlK">
+            <objects>
+                <tableViewController modalPresentationStyle="formSheet" id="5Ju-UW-rvs" customClass="ZENSettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="t7f-Cr-uNa">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="420"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <sections>
+                            <tableViewSection headerTitle="Languages" id="CXv-fo-D2g">
+                                <cells>
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="tng-pg-aYc" detailTextLabel="gdd-aZ-HYg" style="IBUITableViewCellStyleValue1" id="0aX-U6-5Gz">
+                                        <rect key="frame" x="0.0" y="99" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0aX-U6-5Gz" id="OD3-dC-R2a">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="First Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tng-pg-aYc">
+                                                    <rect key="frame" x="15" y="11" width="120" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdd-aZ-HYg">
+                                                    <rect key="frame" x="321" y="12" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="H9V-iZ-v6G" kind="push" identifier="SelectFirstLanguage" id="rFe-lK-rfe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="G5K-bP-nY9" detailTextLabel="Pio-OY-Lk2" style="IBUITableViewCellStyleValue1" id="ugO-6b-O8A">
+                                        <rect key="frame" x="0.0" y="143" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ugO-6b-O8A" id="C1d-2G-6wf">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Second Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G5K-bP-nY9">
+                                                    <rect key="frame" x="15" y="11" width="147" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pio-OY-Lk2">
+                                                    <rect key="frame" x="321" y="12" width="44" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="H9V-iZ-v6G" kind="push" identifier="SelectSecondLanguage" id="sUJ-06-NnY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Item settings" id="cH0-Ru-QOl">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WLI-sN-Ceg">
+                                        <rect key="frame" x="0.0" y="235" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLI-sN-Ceg" id="fR8-Hd-eZ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5i-jH-iIw">
+                                                    <rect key="frame" x="331" y="9" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Display name while speaking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="yt2-hK-w07">
+                                                    <rect key="frame" x="15" y="14" width="308" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="308" id="gN0-rt-q1B"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="J5i-jH-iIw" secondAttribute="trailing" constant="20" symbolic="YES" id="GUt-DC-HQt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="J5i-jH-iIw" firstAttribute="centerY" secondItem="yt2-hK-w07" secondAttribute="centerY" id="DeQ-1Q-rSL"/>
+                                            <constraint firstItem="yt2-hK-w07" firstAttribute="leading" secondItem="WLI-sN-Ceg" secondAttribute="leading" constant="15" id="TeF-Px-4bc"/>
+                                            <constraint firstItem="J5i-jH-iIw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yt2-hK-w07" secondAttribute="trailing" constant="8" symbolic="YES" id="dls-Ha-x8m"/>
+                                            <constraint firstItem="J5i-jH-iIw" firstAttribute="top" secondItem="WLI-sN-Ceg" secondAttribute="top" constant="9" id="hzd-zO-hol"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="y3c-2V-kTF">
+                                        <rect key="frame" x="0.0" y="279" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3c-2V-kTF" id="2u5-Eq-Z9g">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prs-kc-sr9">
+                                                    <rect key="frame" x="331" y="8" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Play animal sounds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="fS8-on-oX8">
+                                                    <rect key="frame" x="15" y="13" width="308" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="308" id="FRC-7a-HU9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Prs-kc-sr9" secondAttribute="trailing" constant="20" symbolic="YES" id="p9b-w2-TJk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Prs-kc-sr9" firstAttribute="top" secondItem="y3c-2V-kTF" secondAttribute="top" constant="8" id="BRe-Yy-jJm"/>
+                                            <constraint firstItem="Prs-kc-sr9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fS8-on-oX8" secondAttribute="trailing" constant="8" symbolic="YES" id="Pmo-O0-gQZ"/>
+                                            <constraint firstItem="Prs-kc-sr9" firstAttribute="centerY" secondItem="fS8-on-oX8" secondAttribute="centerY" id="YdR-Kf-6J1"/>
+                                            <constraint firstItem="fS8-on-oX8" firstAttribute="leading" secondItem="y3c-2V-kTF" secondAttribute="leading" constant="15" id="h6f-Dm-NdB"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Informations" id="xIV-8l-AAv">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="PUU-tD-e1V" style="IBUITableViewCellStyleDefault" id="rab-Rb-tG9">
+                                        <rect key="frame" x="0.0" y="371" width="400" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rab-Rb-tG9" id="uQW-J6-zAo">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Credits" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PUU-tD-e1V">
+                                                    <rect key="frame" x="15" y="0.0" width="350" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="Uu2-Z7-d4C" kind="push" identifier="ShowCredits" id="Mqx-Gq-jaj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="5Ju-UW-rvs" id="Uyl-YE-y4b"/>
+                            <outlet property="delegate" destination="5Ju-UW-rvs" id="Lr9-0h-QLe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="BXa-1H-sZQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="v4q-PC-MrA">
+                            <connections>
+                                <segue destination="vXm-Za-F78" kind="unwind" unwindAction="backToMenu:" id="b3l-oy-kmU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="displayItemNameLabel" destination="yt2-hK-w07" id="fBM-oY-3oR"/>
+                        <outlet property="displayItemNameSwitch" destination="J5i-jH-iIw" id="nNp-dU-vTa"/>
+                        <outlet property="playAnimalSoundsLabel" destination="fS8-on-oX8" id="7qi-1d-wLl"/>
+                        <outlet property="playAnimalSoundsSwitch" destination="Prs-kc-sr9" id="zzG-TP-MmE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D3v-1t-RR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vXm-Za-F78" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="-2021"/>
+        </scene>
+        <!--Language Picker View Controller - Language selection-->
+        <scene sceneID="ctQ-8L-Igd">
+            <objects>
+                <tableViewController id="H9V-iZ-v6G" customClass="ZENLanguagePickerViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="22" sectionFooterHeight="22" id="vna-eP-mit">
+                        <rect key="frame" x="0.0" y="44" width="400" height="376"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LanguagePickerCell" id="VoK-wd-GDH" customClass="ZENLanguageTableViewCell">
+                                <rect key="frame" x="0.0" y="22" width="400" height="54"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VoK-wd-GDH" id="Cct-nG-0DW">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="53"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="FLAG_Brazil" translatesAutoresizingMaskIntoConstraints="NO" id="UGx-Qc-LSp">
+                                            <rect key="frame" x="20" y="0.0" width="50" height="53"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="1Nu-7o-2I0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaH-4J-uiE">
+                                            <rect key="frame" x="102" y="0.0" width="278" height="54"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="UGx-Qc-LSp" secondAttribute="bottom" id="HG7-Ip-vIT"/>
+                                        <constraint firstItem="UGx-Qc-LSp" firstAttribute="top" secondItem="Cct-nG-0DW" secondAttribute="top" id="Ott-9l-q15"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gaH-4J-uiE" secondAttribute="trailing" constant="20" id="4i0-jC-Ehu"/>
+                                    <constraint firstItem="gaH-4J-uiE" firstAttribute="leading" secondItem="UGx-Qc-LSp" secondAttribute="trailing" constant="32" id="XFD-jk-rVm"/>
+                                    <constraint firstItem="UGx-Qc-LSp" firstAttribute="leading" secondItem="VoK-wd-GDH" secondAttribute="leading" constant="20" id="dz3-od-hyA"/>
+                                    <constraint firstItem="gaH-4J-uiE" firstAttribute="top" secondItem="VoK-wd-GDH" secondAttribute="top" id="icz-Kw-L8h"/>
+                                    <constraint firstItem="gaH-4J-uiE" firstAttribute="bottom" secondItem="VoK-wd-GDH" secondAttribute="bottom" id="kbG-gp-HXh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="flagImageView" destination="UGx-Qc-LSp" id="Ph0-EV-v46"/>
+                                    <outlet property="languageLabel" destination="gaH-4J-uiE" id="iRO-uk-tqc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="H9V-iZ-v6G" id="SlU-dX-Iuc"/>
+                            <outlet property="delegate" destination="H9V-iZ-v6G" id="npf-uZ-zmg"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Language selection" id="XsI-Be-ZlS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xe-hh-ybb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-2081"/>
+        </scene>
+        <!--Credits View Controller - Credits-->
+        <scene sceneID="8eC-gm-wrZ">
+            <objects>
+                <viewController id="Uu2-Z7-d4C" customClass="ZENCreditsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vzZ-LR-EFf"/>
+                        <viewControllerLayoutGuide type="bottom" id="jIJ-KL-HSz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AZt-Ia-SmH">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="420"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="© 2013 Frédéric ADDA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNK-oY-3bV">
+                                <rect key="frame" x="20" y="380" width="166" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a49-wI-uaT" userLabel="Containing view">
+                                <rect key="frame" x="20" y="40" width="360" height="290"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Jk-6K-mHa">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="290"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Thanks for making this app possible !
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Language resources
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" French: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Charlotte">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Portuguese (voices): ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Karen
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Portuguese (translations): ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Marcelo">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" English (UK): ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Miranda
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Turkish: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Sumerya
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" German: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Debbi &amp; Hans
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Italian: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Cristina
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Spanish: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Isabel
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Chinese: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Liying
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Arabic: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Anas
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" English (US): ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Maya (recorded by Alex)
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Hebrew: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Talya (recorded by Alex)
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Danish: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Lone
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Swedish: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Stephanie">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <font key="NSFont" size="11" name="Menlo-Regular"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+IAo
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Design
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Good taste consultant: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">Ugur
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="User testing">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.40000000596046448" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="18" name="Helvetica-Bold"/>
+                                                    <font key="NSOriginalFont" size="18" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="🍼">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="AppleColorEmoji"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Test manager: ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="baby Gabriel ">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <font key="NSOriginalFont" size="16" name="Helvetica-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">(2 years old)
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="16" name="Helvetica"/>
+                                                    <integer key="NSLigature" value="0"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" defaultTabInterval="26.449999999999999">
+                                                        <tabStops>
+                                                            <textTab alignment="left" location="26.450000762939453"/>
+                                                        </tabStops>
+                                                    </paragraphStyle>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5Jk-6K-mHa" secondAttribute="trailing" id="85M-4a-VlP"/>
+                                    <constraint firstItem="5Jk-6K-mHa" firstAttribute="leading" secondItem="a49-wI-uaT" secondAttribute="leading" id="ZZT-7x-jMM"/>
+                                    <constraint firstItem="5Jk-6K-mHa" firstAttribute="top" secondItem="a49-wI-uaT" secondAttribute="top" id="dkx-gC-rla"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Jk-6K-mHa" secondAttribute="bottom" id="ixl-Dl-M8I"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ZENBabyBook_title" translatesAutoresizingMaskIntoConstraints="NO" id="Ctm-HM-M7f">
+                                <rect key="frame" x="20" y="338" width="180" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="BP8-66-HVA"/>
+                                    <constraint firstAttribute="height" constant="37" id="OEg-p9-loG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ctm-HM-M7f" firstAttribute="top" secondItem="a49-wI-uaT" secondAttribute="bottom" constant="8" symbolic="YES" id="2lt-fr-T56"/>
+                            <constraint firstItem="a49-wI-uaT" firstAttribute="top" secondItem="AZt-Ia-SmH" secondAttribute="top" constant="40" id="AhU-b2-Q4z"/>
+                            <constraint firstItem="RNK-oY-3bV" firstAttribute="leading" secondItem="AZt-Ia-SmH" secondAttribute="leading" constant="20" symbolic="YES" id="Jaw-ey-FL1"/>
+                            <constraint firstItem="a49-wI-uaT" firstAttribute="leading" secondItem="AZt-Ia-SmH" secondAttribute="leading" constant="20" symbolic="YES" id="c2a-Qa-hDC"/>
+                            <constraint firstAttribute="trailing" secondItem="a49-wI-uaT" secondAttribute="trailing" constant="20" symbolic="YES" id="dVg-8Z-VwY"/>
+                            <constraint firstItem="RNK-oY-3bV" firstAttribute="top" secondItem="Ctm-HM-M7f" secondAttribute="bottom" constant="5" id="hdz-c8-ZUs"/>
+                            <constraint firstItem="Ctm-HM-M7f" firstAttribute="leading" secondItem="RNK-oY-3bV" secondAttribute="leading" id="nfl-iL-wP1"/>
+                            <constraint firstAttribute="bottom" secondItem="RNK-oY-3bV" secondAttribute="bottom" constant="20" symbolic="YES" id="qt1-6S-PBC"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Credits" id="6Rn-5N-VYj"/>
+                    <connections>
+                        <outlet property="containingView" destination="a49-wI-uaT" id="wa6-aB-Ywp"/>
+                        <outlet property="textView" destination="5Jk-6K-mHa" id="isP-tS-Uq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJH-Qh-KzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-1556"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="Vkw-Vf-FKi">
+            <objects>
+                <viewController id="uSg-HN-9qs" customClass="ZENAlbumViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2pK-Mf-Yfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="LBv-er-FBS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sWP-8U-vJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-9a-myA">
+                                <rect key="frame" x="20" y="88" width="984" height="680"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZBf-26-kV9">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="cgq-Ja-rHY" customClass="ZENAlbumImageCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="vTZ-ii-4uz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="vTZ-ii-4uz" firstAttribute="bottom" secondItem="cgq-Ja-rHY" secondAttribute="bottom" id="1dX-C4-3tb"/>
+                                            <constraint firstItem="vTZ-ii-4uz" firstAttribute="leading" secondItem="cgq-Ja-rHY" secondAttribute="leading" id="IoT-OW-bTK"/>
+                                            <constraint firstItem="vTZ-ii-4uz" firstAttribute="trailing" secondItem="cgq-Ja-rHY" secondAttribute="trailing" id="Za9-sx-l3Z"/>
+                                            <constraint firstItem="vTZ-ii-4uz" firstAttribute="top" secondItem="cgq-Ja-rHY" secondAttribute="top" id="fTz-1X-RoX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="vTZ-ii-4uz" id="9t7-9n-N3b"/>
+                                            <segue destination="8IX-50-Ttk" kind="modal" identifier="ShowItem" customClass="ZENExpandingSegue" modalTransitionStyle="coverVertical" id="HZP-6v-17J"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="uSg-HN-9qs" id="gnP-Kr-JeU"/>
+                                    <outlet property="delegate" destination="uSg-HN-9qs" id="56r-6e-xsD"/>
+                                </connections>
+                            </collectionView>
+                            <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Album name" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="cNu-ge-dZo">
+                                <rect key="frame" x="300" y="18" width="424" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="424" id="29L-Ky-a3z"/>
+                                    <constraint firstAttribute="height" constant="62" id="ofO-Wm-FV8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah7-c9-ElZ">
+                                <rect key="frame" x="35" y="23" width="52" height="52"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Av6-PC-Qf5"/>
+                                    <constraint firstAttribute="width" constant="52" id="TC8-vh-Lic"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="home"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zhj-1G-hZi" kind="unwind" unwindAction="backToMenu:" id="eCH-z3-rs7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49803921569999998" green="0.74509803919999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ah7-c9-ElZ" firstAttribute="centerY" secondItem="cNu-ge-dZo" secondAttribute="centerY" id="0zC-G3-KWn"/>
+                            <constraint firstAttribute="centerX" secondItem="cgP-9a-myA" secondAttribute="centerX" id="H6B-Fw-Ira"/>
+                            <constraint firstItem="cgP-9a-myA" firstAttribute="leading" secondItem="sWP-8U-vJ5" secondAttribute="leading" constant="20" symbolic="YES" id="MIi-Vl-p6a"/>
+                            <constraint firstAttribute="trailing" secondItem="cgP-9a-myA" secondAttribute="trailing" constant="20" symbolic="YES" id="TfK-fg-wUJ"/>
+                            <constraint firstItem="Ah7-c9-ElZ" firstAttribute="leading" secondItem="sWP-8U-vJ5" secondAttribute="leading" constant="35" id="VQx-iA-k03"/>
+                            <constraint firstItem="cgP-9a-myA" firstAttribute="top" secondItem="cNu-ge-dZo" secondAttribute="bottom" constant="8" symbolic="YES" id="Wpu-ID-mix"/>
+                            <constraint firstItem="cNu-ge-dZo" firstAttribute="top" secondItem="sWP-8U-vJ5" secondAttribute="top" constant="18" id="joM-2v-85H"/>
+                            <constraint firstItem="cgP-9a-myA" firstAttribute="centerX" secondItem="cNu-ge-dZo" secondAttribute="centerX" id="sUn-JF-vyi"/>
+                            <constraint firstAttribute="bottom" secondItem="cgP-9a-myA" secondAttribute="bottom" id="zBW-EY-nSr"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="albumNameLabel" destination="cNu-ge-dZo" id="8Cx-02-I70"/>
+                        <outlet property="homeButton" destination="Ah7-c9-ElZ" id="6uA-Mi-qbv"/>
+                        <outlet property="imageCollectionView" destination="cgP-9a-myA" id="ZcG-DM-NII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kuk-6M-GM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Zhj-1G-hZi" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="-3041"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="K8D-dM-3Q4">
+            <objects>
+                <viewController storyboardIdentifier="ImageView" id="8IX-50-Ttk" customClass="ZENImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vio-Da-ygW"/>
+                        <viewControllerLayoutGuide type="bottom" id="57p-VD-IeW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="" id="vdB-KM-for">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="IMG_Cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="aeQ-X0-0bl" userLabel="IMG">
+                                <rect key="frame" x="262" y="134" width="500" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="500" id="lOD-CJ-udR"/>
+                                    <constraint firstAttribute="height" constant="500" id="qGf-2S-gif"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syr-Dr-25v" userLabel="Button (IMG)">
+                                <rect key="frame" x="262" y="134" width="500" height="500"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" playsSound="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="8IX-50-Ttk" eventType="touchUpInside" id="5fz-19-6mw"/>
+                                    <outletCollection property="gestureRecognizers" destination="fqH-ov-Q5Q" appends="YES" id="Pwn-Dc-Zyp"/>
+                                    <outletCollection property="gestureRecognizers" destination="FRG-2a-dZd" appends="YES" id="If2-Sr-CF0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6W-Oc-3ub" userLabel="Button (FLAG_1)">
+                                <rect key="frame" x="262" y="642" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" playsSound="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DtN-fl-3ph"/>
+                                    <constraint firstAttribute="width" constant="100" id="fFM-Ey-PF9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="FLAG_France">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="8IX-50-Ttk" eventType="touchUpInside" id="arJ-z2-rG7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCb-rN-FLA" userLabel="Button (FLAG_2)">
+                                <rect key="frame" x="662" y="642" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" playsSound="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="q41-wY-BCw"/>
+                                    <constraint firstAttribute="width" constant="100" id="wzb-uA-qxK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="FLAG_Brazil">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playSound:" destination="8IX-50-Ttk" eventType="touchUpInside" id="uVl-bJ-NKx"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmo-4G-cP4">
+                                <rect key="frame" x="35" y="26" width="52" height="52"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="oMj-xa-UWS"/>
+                                    <constraint firstAttribute="width" constant="52" id="p3O-30-jiy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="grid-layout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cCE-cB-9Zq" kind="unwind" unwindAction="backToAlbum:" id="TCS-CA-gtS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="5q1-ZA-zjF">
+                                <rect key="frame" x="262" y="20" width="500" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="5UG-cb-S35"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0j-5l-18C">
+                                <rect key="frame" x="904" y="334" width="100" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Dkw-QK-7hM"/>
+                                    <constraint firstAttribute="width" constant="100" id="zgh-6w-DfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="arrow-right">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayNextItem:" destination="8IX-50-Ttk" eventType="touchUpInside" id="zlG-vy-QcU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQX-a0-bKc">
+                                <rect key="frame" x="20" y="334" width="100" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="a9N-r5-rhu"/>
+                                    <constraint firstAttribute="height" constant="100" id="isu-1o-mw7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="arrow-left">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayPreviousItem:" destination="8IX-50-Ttk" eventType="touchUpInside" id="CrY-u8-7OO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Syr-Dr-25v" firstAttribute="leading" secondItem="aeQ-X0-0bl" secondAttribute="leading" id="2cQ-fT-T2W"/>
+                            <constraint firstItem="G0j-5l-18C" firstAttribute="centerY" secondItem="FQX-a0-bKc" secondAttribute="centerY" id="2g4-hT-sWL"/>
+                            <constraint firstItem="aeQ-X0-0bl" firstAttribute="trailing" secondItem="5q1-ZA-zjF" secondAttribute="trailing" id="6ZP-Pq-S71"/>
+                            <constraint firstItem="Syr-Dr-25v" firstAttribute="height" secondItem="aeQ-X0-0bl" secondAttribute="height" id="9n0-qy-ygP"/>
+                            <constraint firstItem="Syr-Dr-25v" firstAttribute="leading" secondItem="s6W-Oc-3ub" secondAttribute="leading" id="BBd-sp-xbP"/>
+                            <constraint firstItem="5q1-ZA-zjF" firstAttribute="top" secondItem="vdB-KM-for" secondAttribute="top" constant="20" symbolic="YES" id="D1h-Vl-2bC"/>
+                            <constraint firstItem="G0j-5l-18C" firstAttribute="top" secondItem="FQX-a0-bKc" secondAttribute="top" id="GDy-Im-F3d"/>
+                            <constraint firstItem="aeQ-X0-0bl" firstAttribute="centerX" secondItem="vdB-KM-for" secondAttribute="centerX" id="GId-1a-bUC"/>
+                            <constraint firstAttribute="bottom" secondItem="zCb-rN-FLA" secondAttribute="bottom" constant="26" id="HRc-eg-eSl"/>
+                            <constraint firstItem="zCb-rN-FLA" firstAttribute="centerY" secondItem="s6W-Oc-3ub" secondAttribute="centerY" id="Mqs-3n-JlG"/>
+                            <constraint firstItem="aeQ-X0-0bl" firstAttribute="trailing" secondItem="zCb-rN-FLA" secondAttribute="trailing" id="OK9-WE-tBH"/>
+                            <constraint firstItem="s6W-Oc-3ub" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aeQ-X0-0bl" secondAttribute="bottom" constant="8" symbolic="YES" id="OhP-vB-m5u"/>
+                            <constraint firstItem="Syr-Dr-25v" firstAttribute="width" secondItem="aeQ-X0-0bl" secondAttribute="width" id="Qom-EI-626"/>
+                            <constraint firstAttribute="bottom" secondItem="s6W-Oc-3ub" secondAttribute="bottom" constant="26" id="Tdw-dm-FVk"/>
+                            <constraint firstItem="FQX-a0-bKc" firstAttribute="leading" secondItem="vdB-KM-for" secondAttribute="leading" constant="20" symbolic="YES" id="TmY-vV-evK"/>
+                            <constraint firstItem="Kmo-4G-cP4" firstAttribute="centerY" secondItem="5q1-ZA-zjF" secondAttribute="centerY" id="To0-RN-jYw"/>
+                            <constraint firstAttribute="centerY" secondItem="aeQ-X0-0bl" secondAttribute="centerY" id="VTu-Hi-gYo"/>
+                            <constraint firstAttribute="trailing" secondItem="G0j-5l-18C" secondAttribute="trailing" constant="20" symbolic="YES" id="WoM-i1-xKt"/>
+                            <constraint firstItem="aeQ-X0-0bl" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5q1-ZA-zjF" secondAttribute="bottom" priority="666" constant="8" symbolic="YES" id="YcJ-QA-3GM"/>
+                            <constraint firstItem="5q1-ZA-zjF" firstAttribute="leading" secondItem="Syr-Dr-25v" secondAttribute="leading" id="d9q-7O-Dkr"/>
+                            <constraint firstItem="Syr-Dr-25v" firstAttribute="top" secondItem="aeQ-X0-0bl" secondAttribute="top" id="iqi-zE-7Pn"/>
+                            <constraint firstAttribute="centerY" secondItem="FQX-a0-bKc" secondAttribute="centerY" id="mZU-dw-KtU"/>
+                            <constraint firstItem="Kmo-4G-cP4" firstAttribute="leading" secondItem="vdB-KM-for" secondAttribute="leading" constant="35" id="pRk-hM-CcL"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C40-tV-CVl"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="backButton" destination="Kmo-4G-cP4" id="TRs-2M-wBa"/>
+                        <outlet property="buttonFirstLanguage" destination="s6W-Oc-3ub" id="KUU-GK-FDT"/>
+                        <outlet property="buttonImage" destination="Syr-Dr-25v" id="RmL-Bd-igC"/>
+                        <outlet property="buttonSecondLanguage" destination="zCb-rN-FLA" id="ubu-BD-nkf"/>
+                        <outlet property="itemLabel" destination="5q1-ZA-zjF" id="ctV-EG-rkI"/>
+                        <outlet property="leftArrowButton" destination="FQX-a0-bKc" id="gzz-nw-BPk"/>
+                        <outlet property="mainImageView" destination="aeQ-X0-0bl" id="L3v-wQ-Zxn"/>
+                        <outlet property="rightArrowButton" destination="G0j-5l-18C" id="RSA-CG-ChZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3U-II-Kky" sceneMemberID="firstResponder"/>
+                <exit id="cCE-cB-9Zq" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="right" id="fqH-ov-Q5Q">
+                    <connections>
+                        <action selector="displayPreviousItem:" destination="8IX-50-Ttk" id="mzN-vT-a7a"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="FRG-2a-dZd">
+                    <connections>
+                        <action selector="displayNextItem:" destination="8IX-50-Ttk" id="nEU-pg-0nH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="43" y="-3041"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Teg-ey-gd7">
+            <objects>
+                <navigationController id="S6U-GQ-Zn6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hcP-YI-GaB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Ju-UW-rvs" kind="relationship" relationship="rootViewController" id="ZY9-CY-8Sq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuA-3P-bbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="-2021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FLAG_Brazil" width="128" height="128"/>
+        <image name="FLAG_France" width="128" height="128"/>
+        <image name="IMG_Cat.png" width="500" height="500"/>
+        <image name="ZENBabyBook_title" width="354" height="72"/>
+        <image name="arrow-left" width="150" height="150"/>
+        <image name="arrow-right" width="150" height="150"/>
+        <image name="grid-layout" width="26" height="26"/>
+        <image name="home" width="27" height="26"/>
+        <image name="switches" width="22" height="26"/>
+    </resources>
+    <color key="tintColor" red="0.20000000000000001" green="0.30196078430000001" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="sUJ-06-NnY"/>
+    </inferredMetricsTieBreakers>
+</document>
