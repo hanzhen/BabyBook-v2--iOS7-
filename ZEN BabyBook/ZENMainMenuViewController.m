@@ -13,14 +13,16 @@
 #import "ZENAlbumCoverCell.h"
 #import "ZENSettingsTableViewController.h"
 #import "ZENPortalAnimationController.h"
+#import "CEPinchInteractionController.h"
 @import QuartzCore;
 
-@interface ZENMainMenuViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate>
+@interface ZENMainMenuViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *albumCollectionView;
 @property (strong, nonatomic) UIPopoverController *preferencesPopover;
 @property (strong, nonatomic) ZENPortalAnimationController *portalAnimationController;
+@property (strong, nonatomic) CEPinchInteractionController *pinchInteractionController;
 
 @end
 
@@ -43,6 +45,13 @@
     self.titleImageView.layer.cornerRadius = 12.0;
     */
     
+    // Title
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ZENBabyBook_titleSmall"]];
+    
+    // Navigation controller delegate
+    // (necessary for custom transitions within navigationController)
+    self.navigationController.delegate = self;
+    
 }
 
 
@@ -55,11 +64,6 @@
 }
 
 
-- (void)dealloc
-{
-    // Remove observers
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
 
 #pragma mark - UICollectionView Datasource methods
 
@@ -93,20 +97,18 @@
  */
 
 
-
 #pragma mark - UICollectionView DelegateFlowLayout methods
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    return CGSizeMake(250, 250);
-}
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    // set in Interface Builder
+//}
 
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(15, 45, 15, 45);
-
-}
+//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+//{
+//    // set in Interface Builder
+//}
 
 
 #pragma mark - Segue
@@ -132,13 +134,18 @@
                 ZENAlbumViewController *albumViewController = segue.destinationViewController;
                 albumViewController.album = selectedAlbum;
                 
+                // Custom VC transition
                 albumViewController.transitioningDelegate = self;
+                [self.pinchInteractionController wireToViewController:albumViewController forOperation:CEInteractionOperationDismiss];
             }
         }
     } else if ([segue.identifier isEqualToString:@"ShowSettingsInPopover"]) {
         if ([segue isKindOfClass:[UIStoryboardPopoverSegue class]]) {
             self.preferencesPopover = ((UIStoryboardPopoverSegue *)segue).popoverController;
         }
+        
+    } else if ([segue.identifier isEqualToString:@"ShowSettings"]) {
+        // unused yet
     }
 }
 
@@ -164,18 +171,30 @@
 //    return YES;
 //}
 
-#pragma mark - UIViewControllerTransitioningDelegate
+#pragma mark - Animation / Interaction controllers
 
 // Animation Controller lazy instantiation
 - (ZENPortalAnimationController *)portalAnimationController
 {
     if (!_portalAnimationController) {
-        _portalAnimationController = [[ZENPortalAnimationController alloc] init];
+        _portalAnimationController = [ZENPortalAnimationController new];
     }
     
     return _portalAnimationController;
 }
 
+
+// Interaction Controller lazy instantiation
+- (CEPinchInteractionController *)pinchInteractionController
+{
+    if (!_pinchInteractionController) {
+        _pinchInteractionController = [CEPinchInteractionController new];
+    }
+    return _pinchInteractionController;
+}
+
+
+#pragma mark - UIViewControllerTransitioningDelegate
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                   presentingController:(UIViewController *)presenting
@@ -189,6 +208,36 @@
     self.portalAnimationController.reverse = YES;
     self.portalAnimationController.duration = 0.8f;
     return self.portalAnimationController;
+}
+
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+    return self.pinchInteractionController.interactionInProgress ? self.pinchInteractionController : nil;
+}
+
+
+#pragma mark - UINavigationControllerDelegate
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController *)fromVC
+                                                 toViewController:(UIViewController *)toVC {
+    
+    if (operation == UINavigationControllerOperationPush) {
+        [self.pinchInteractionController wireToViewController:toVC forOperation:CEInteractionOperationPop];
+    }
+    
+    self.portalAnimationController.reverse = operation == UINavigationControllerOperationPop;
+    self.portalAnimationController.duration = 0.8f;
+    return self.portalAnimationController;
+}
+
+
+- (id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                          interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
+    
+    
+    return self.pinchInteractionController.interactionInProgress ? self.pinchInteractionController : nil;
 }
 
 @end

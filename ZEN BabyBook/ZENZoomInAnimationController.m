@@ -52,7 +52,7 @@
                                   [UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.5f animations:^{
                                       
                                       // Dim the from-view (the to-View is completely dimmed, so it gives a nice "fade-to-black" effect)
-                                      fromView.alpha = 0.5;
+                                      fromView.alpha = 0.7;
                                       
                                       // Move the image snapshot to the center
                                       fromViewSnapshot.center = toView.center;
@@ -116,15 +116,14 @@
                                  options:0
                               animations:^{
                                   
-                                  [UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.3f animations:^{
-                                      // Finish fading-out the from-view, and fade-in the to-view
-                                      fromView.alpha = 0.3;
+                                  [UIView addKeyframeWithRelativeStartTime:0.0f relativeDuration:0.4f animations:^{
+                                      // Start fading-out the from-view
+                                      fromView.alpha = 0.0;
                                   }];
 
-                                  [UIView addKeyframeWithRelativeStartTime:0.3f relativeDuration:0.6f animations:^{
+                                  [UIView addKeyframeWithRelativeStartTime:0.2f relativeDuration:0.6f animations:^{
                                       
                                       // Dim the from-view and start fading-in the to-view
-                                      fromView.alpha = 0.0;
                                       toView.alpha = 0.5;
                                       
                                       // Move the image snapshot to the initial place
@@ -167,5 +166,7 @@
         }
     }
 }
+
+
 
 @end

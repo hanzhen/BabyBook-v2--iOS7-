@@ -16,6 +16,8 @@
 @property (strong, nonatomic) ZENLanguage *secondLanguage;
 @property (strong, nonatomic) ZENItem *item;
 
+// Following properties are public to allow frame calculations for animation controller
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
+@property (nonatomic) BOOL hasDeviceRotated;
 
 @end

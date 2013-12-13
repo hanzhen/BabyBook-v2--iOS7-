@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B607F4C91715C3B7004425E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B607F4C81715C3B7004425E6 /* QuartzCore.framework */; };
+		B60C28141857D4E600C61E6C /* CEBaseInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60C28111857D4E600C61E6C /* CEBaseInteractionController.m */; };
+		B60C28151857D4E600C61E6C /* CEPinchInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60C28131857D4E600C61E6C /* CEPinchInteractionController.m */; };
+		B60C281A1858CFCF00C61E6C /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60C28181858CFCF00C61E6C /* Storyboard_iPhone.storyboard */; };
 		B631A14E170734BE00ED351A /* Colors in Resources */ = {isa = PBXBuildFile; fileRef = B631A14D170734BE00ED351A /* Colors */; };
 		B63E9D4A184E08FF00C46FF6 /* UIButton+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = B63E9D49184E08FF00C46FF6 /* UIButton+Round.m */; };
 		B643771316C7C59A00EDCB5C /* ZENAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B643771216C7C59A00EDCB5C /* ZENAlbumViewController.m */; };
@@ -49,6 +52,11 @@
 
 /* Begin PBXFileReference section */
 		B607F4C81715C3B7004425E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B60C28101857D4E600C61E6C /* CEBaseInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEBaseInteractionController.h; sourceTree = "<group>"; };
+		B60C28111857D4E600C61E6C /* CEBaseInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEBaseInteractionController.m; sourceTree = "<group>"; };
+		B60C28121857D4E600C61E6C /* CEPinchInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CEPinchInteractionController.h; sourceTree = "<group>"; };
+		B60C28131857D4E600C61E6C /* CEPinchInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CEPinchInteractionController.m; sourceTree = "<group>"; };
+		B60C28191858CFCF00C61E6C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "ZEN BabyBook/en.lproj/Storyboard_iPhone.storyboard"; sourceTree = "<group>"; };
 		B631A14D170734BE00ED351A /* Colors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Colors; sourceTree = "<group>"; };
 		B63E9D48184E08FF00C46FF6 /* UIButton+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+Round.h"; path = "ZEN BabyBook/UIButton+Round.h"; sourceTree = "<group>"; };
 		B63E9D49184E08FF00C46FF6 /* UIButton+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Round.m"; path = "ZEN BabyBook/UIButton+Round.m"; sourceTree = "<group>"; };
@@ -138,6 +146,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60C28161857D4EC00C61E6C /* InteractionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B60C28101857D4E600C61E6C /* CEBaseInteractionController.h */,
+				B60C28111857D4E600C61E6C /* CEBaseInteractionController.m */,
+				B60C28121857D4E600C61E6C /* CEPinchInteractionController.h */,
+				B60C28131857D4E600C61E6C /* CEPinchInteractionController.m */,
+			);
+			name = InteractionControllers;
+			sourceTree = "<group>";
+		};
+		B60C28171857D4F800C61E6C /* AnimationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6748B9A1853B5B700529BF9 /* CEReversibleAnimationController.h */,
+				B6748B9B1853B5B700529BF9 /* CEReversibleAnimationController.m */,
+				B6748BA01853B61C00529BF9 /* ZENPortalAnimationController.h */,
+				B6748BA11853B61C00529BF9 /* ZENPortalAnimationController.m */,
+				B6748BA31853E05100529BF9 /* ZENZoomInAnimationController.h */,
+				B6748BA41853E05100529BF9 /* ZENZoomInAnimationController.m */,
+			);
+			name = AnimationControllers;
+			sourceTree = "<group>";
+		};
 		B643771C16C7D8EA00EDCB5C /* Custom Album collectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B66B2DF816BEA35A00C420F7 /* Storyboard_iPad.storyboard */,
+				B60C28181858CFCF00C61E6C /* Storyboard_iPhone.storyboard */,
 				B64E347216EDE26E009F57EF /* Main menu VC */,
 				B64E347316EDE279009F57EF /* Album VC */,
 				B64E347416EDE286009F57EF /* Image VC */,
@@ -311,12 +344,8 @@
 		B6748B99185396BC00529BF9 /* Custom VC transitions */ = {
 			isa = PBXGroup;
 			children = (
-				B6748B9A1853B5B700529BF9 /* CEReversibleAnimationController.h */,
-				B6748B9B1853B5B700529BF9 /* CEReversibleAnimationController.m */,
-				B6748BA01853B61C00529BF9 /* ZENPortalAnimationController.h */,
-				B6748BA11853B61C00529BF9 /* ZENPortalAnimationController.m */,
-				B6748BA31853E05100529BF9 /* ZENZoomInAnimationController.h */,
-				B6748BA41853E05100529BF9 /* ZENZoomInAnimationController.m */,
+				B60C28171857D4F800C61E6C /* AnimationControllers */,
+				B60C28161857D4EC00C61E6C /* InteractionControllers */,
 			);
 			name = "Custom VC transitions";
 			sourceTree = "<group>";
@@ -435,6 +464,7 @@
 				B69BFB8918394D36001E79F7 /* Fruits in Resources */,
 				B64BA4D416BF0E960002B073 /* Localizable.strings in Resources */,
 				B6B5769317CA2EF100CFB022 /* Images.xcassets in Resources */,
+				B60C281A1858CFCF00C61E6C /* Storyboard_iPhone.storyboard in Resources */,
 				B64BA4DC16BF0FFA0002B073 /* AnimalsFarm in Resources */,
 				B631A14E170734BE00ED351A /* Colors in Resources */,
 				B69BFB8718394D2A001E79F7 /* AnimalsOcean in Resources */,
@@ -457,8 +487,10 @@
 				B66B2E2316BEA49A00C420F7 /* ZENAlbum.m in Sources */,
 				B69BFB8B18395465001E79F7 /* ZENAppDelegate.m in Sources */,
 				B66B2E2416BEA49A00C420F7 /* ZENItem.m in Sources */,
+				B60C28141857D4E600C61E6C /* CEBaseInteractionController.m in Sources */,
 				B643771316C7C59A00EDCB5C /* ZENAlbumViewController.m in Sources */,
 				B6748BA51853E05100529BF9 /* ZENZoomInAnimationController.m in Sources */,
+				B60C28151857D4E600C61E6C /* CEPinchInteractionController.m in Sources */,
 				B643771B16C7D8E500EDCB5C /* ZENAlbumImageCell.m in Sources */,
 				B6A9489B16CA6AE20096075C /* ZENGlobalSettings.m in Sources */,
 				B6A9489E16CAC0910096075C /* ZENLanguageStore.m in Sources */,
@@ -479,6 +511,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B60C28181858CFCF00C61E6C /* Storyboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60C28191858CFCF00C61E6C /* en */,
+			);
+			name = Storyboard_iPhone.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		B64BA4D616BF0E960002B073 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -592,7 +633,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -611,7 +652,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

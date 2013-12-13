@@ -2,6 +2,24 @@
   "images" : [
     {
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "ZEN Babybook icon (58)-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "ZEN Babybook icon (80)-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "ZEN Babybook icon (120).png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
       "idiom" : "ipad",
       "filename" : "ZEN Babybook icon (29).png",
       "scale" : "1x"

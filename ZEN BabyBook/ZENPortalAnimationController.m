@@ -24,11 +24,18 @@
 - (void)executeForwardsAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
     
     UIView *containerView = [transitionContext containerView];
-
+    
+    // Zoom effect : only for iPad because there we see the whole collectionView to animate to
     // Add a reduced snapshot of the toView to the container
-    UIView *toViewSnapshot = [toView resizableSnapshotViewFromRect:toView.frame afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
-    CATransform3D scale = CATransform3DIdentity;
-    toViewSnapshot.layer.transform = CATransform3DScale(scale, ZOOM_SCALE, ZOOM_SCALE, 1);
+    UIView *toViewSnapshot;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        toViewSnapshot = [toView resizableSnapshotViewFromRect:toView.frame afterScreenUpdates:YES withCapInsets:UIEdgeInsetsZero];
+        CATransform3D scale = CATransform3DIdentity;
+        toViewSnapshot.layer.transform = CATransform3DScale(scale, ZOOM_SCALE, ZOOM_SCALE, 1);;
+    } else {
+        toViewSnapshot = toView;
+    }
+
     [containerView addSubview:toViewSnapshot];
     [containerView sendSubviewToBack:toViewSnapshot];
     
@@ -62,15 +69,21 @@
                          rightHandView.frame = CGRectOffset(rightHandView.frame, rightHandView.frame.size.width, 0);
                          
                          // zoom in the to-view
-                         toViewSnapshot.center = toView.center;
-                         toViewSnapshot.frame = toView.frame;
+                         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                             toViewSnapshot.center = toView.center;
+                             toViewSnapshot.frame = toView.frame;;
+                         }
+
                          
                      } completion:^(BOOL finished) {
                          
                          // remove all the temporary views
                          if ([transitionContext transitionWasCancelled]) {
+                             [containerView addSubview:fromView];
                              [self removeOtherViews:fromView];
                          } else {
+                             // add the real to- view and remove the snapshots
+                             [containerView addSubview:toView];
                              [self removeOtherViews:toView];
                          }
                          
@@ -85,9 +98,13 @@
 - (void)executeReverseAnimation:(id<UIViewControllerContextTransitioning>)transitionContext fromVC:(UIViewController *)fromVC toVC:(UIViewController *)toVC fromView:(UIView *)fromView toView:(UIView *)toView {
     
     UIView *containerView = [transitionContext containerView];
-
+    
     // Add the from-view to the container
     [containerView addSubview:fromView];
+    
+    // add the to- view and send offscreen (we need to do this in order to allow snapshotting)
+    toView.frame = CGRectOffset(toView.frame, toView.frame.size.width, 0);
+    [containerView addSubview:toView];
     
     
     // Create two-part snapshots of the to- view
@@ -121,9 +138,10 @@
                          rightHandView.frame = CGRectOffset(rightHandView.frame, - rightHandView.frame.size.width, 0);
                          
                          // Zoom out the from-view
-                         CATransform3D scale = CATransform3DIdentity;
-                         fromView.layer.transform = CATransform3DScale(scale, ZOOM_SCALE, ZOOM_SCALE, 1);
-
+                         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                             CATransform3D scale = CATransform3DIdentity;
+                             fromView.layer.transform = CATransform3DScale(scale, ZOOM_SCALE, ZOOM_SCALE, 1);
+                         }
                          
                      } completion:^(BOOL finished) {
                          
@@ -132,6 +150,7 @@
                              [self removeOtherViews:fromView];
                          } else {
                              [self removeOtherViews:toView];
+                             toView.frame = containerView.bounds;
                          }
                          
                          // inform the context of completion
@@ -151,3 +170,4 @@
 }
 
 @end
+

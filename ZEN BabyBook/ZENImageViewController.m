@@ -23,10 +23,12 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonImage;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFirstLanguage;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSecondLanguage;
-@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *backButton; // iPad only
 @property (weak, nonatomic) IBOutlet UIButton *leftArrowButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightArrowButton;
-@property (weak, nonatomic) IBOutlet UILabel *itemLabel;
+@property (weak, nonatomic) IBOutlet UILabel *itemLabel; // iPad only
+
+@property (strong, nonatomic) UILabel *titleLabel; // iPhone only
 
 // Sound properties
 @property (nonatomic) SystemSoundID itemSound; // animal sound for example, not always present
@@ -80,7 +82,18 @@
     // Display FLAG images
     [self.buttonFirstLanguage setImage:[UIImage imageNamed:self.firstLanguage.flagImageName] forState:UIControlStateNormal];
     [self.buttonSecondLanguage setImage:[UIImage imageNamed:self.secondLanguage.flagImageName] forState:UIControlStateNormal];
-
+    
+    
+    
+    // TITLE LABEL
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 32)]; // 32 = navigationBar height for iPhone in landscape
+    self.titleLabel.text = @"";
+    self.titleLabel.textColor = [UIColor darkGrayColor];
+    self.titleLabel.font = [UIFont systemFontOfSize:24.0];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.navigationItem.titleView = self.titleLabel; // in the navigation Item = iPhone only
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -92,6 +105,10 @@
     
     // UPDATE item image and sounds
     [self updateItemResources];
+    
+    // Initial state for device rotation
+    self.hasDeviceRotated = NO;
+
 }
 
 
@@ -107,6 +124,9 @@
     AudioServicesDisposeSystemSoundID(self.speechFirstLanguage);
     AudioServicesDisposeSystemSoundID(self.speechSecondLanguage);
 }
+
+
+
 
 #pragma mark - Custom methods
 
@@ -165,13 +185,16 @@
     } else if (sender == self.buttonFirstLanguage) {
         sound = self.speechFirstLanguage;
         if ([[ZENGlobalSettings sharedStore] displayItemNames]) {
-            [self displayLabel:self.itemLabel withText:self.item.album.itemNames[self.firstLanguage.code][self.item.name] forDuration:1.0];
+            [self displayLabel:self.itemLabel withText:self.item.album.itemNames[self.firstLanguage.code][self.item.name] forDuration:1.0]; // iPad
+            [self displayLabel:self.titleLabel withText:self.item.album.itemNames[self.firstLanguage.code][self.item.name] forDuration:1.0]; // iPhone
         }
      
     } else if (sender == self.buttonSecondLanguage) {
         sound = self.speechSecondLanguage;
         if ([[ZENGlobalSettings sharedStore] displayItemNames]) {
-            [self displayLabel:self.itemLabel withText:self.item.album.itemNames[self.secondLanguage.code][self.item.name] forDuration:1.0];
+            [self displayLabel:self.itemLabel withText:self.item.album.itemNames[self.secondLanguage.code][self.item.name] forDuration:1.0]; // iPad
+            [self displayLabel:self.titleLabel withText:self.item.album.itemNames[self.secondLanguage.code][self.item.name] forDuration:1.0]; // iPhone
+
         }
     }
 
@@ -254,4 +277,12 @@
 }
 
 
+#pragma mark - Manage rotation
+// especially useful to know if rotation has occurred for iPad ZoomInAnimation
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    NSLog(@"Device did Rotate");
+    self.hasDeviceRotated = YES;
+}
 @end
